@@ -358,26 +358,26 @@ extension TabPageViewController: UIPageViewControllerDelegate {
 extension TabPageViewController: UIScrollViewDelegate {
 
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView.contentOffset.x == defaultContentOffsetX || !shouldScrollCurrentBar {
-            return
-        }
-
-        // (0..<tabItemsCount)
-        var index: Int
-        if scrollView.contentOffset.x > defaultContentOffsetX {
-            index = beforeIndex + 1
-        } else {
-            index = beforeIndex - 1
-        }
-        
-        if index == tabItemsCount {
-            index = 0
-        } else if index < 0 {
-            index = tabItemsCount - 1
-        }
-
-        let scrollOffsetX = scrollView.contentOffset.x - view.frame.width
-        tabView.scrollCurrentBarView(index, contentOffsetX: scrollOffsetX)
+//        if scrollView.contentOffset.x == defaultContentOffsetX || !shouldScrollCurrentBar {
+//            return
+//        }
+//
+//        // (0..<tabItemsCount)
+//        var index: Int
+//        if scrollView.contentOffset.x > defaultContentOffsetX {
+//            index = beforeIndex + 1
+//        } else {
+//            index = beforeIndex - 1
+//        }
+//
+//        if index == tabItemsCount {
+//            index = 0
+//        } else if index < 0 {
+//            index = tabItemsCount - 1
+//        }
+//
+//        let scrollOffsetX = scrollView.contentOffset.x - view.frame.width
+//        tabView.scrollCurrentBarView(index, contentOffsetX: scrollOffsetX)
     }
 
     public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
